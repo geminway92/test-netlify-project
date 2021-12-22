@@ -1,15 +1,11 @@
-// Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-function suma(a,b){
-  let suma = a + b
-  return ` ${a+b}`
-}
 
 const handler = async (event) => {
+  const a = event.queryStringParameters.num1
+  const b = event.queryStringParameters.num2
   try {
-    const resultado = suma()
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `El resultado es ${resultado}` }),
+      body: JSON.stringify({ message: `El resultado de ${a} + ${b} es ${a + b}` }),
 
     }
   } catch (error) {
