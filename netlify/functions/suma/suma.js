@@ -3,11 +3,11 @@ function suma(a,b){
   return `La resultado de ${a} + ${b} es ${a+b}`
 }
 
-const handler = async (event) => {
+const handler = async (a,b) => {
   try {
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: suma() }),
+      body: JSON.stringify({ message: `La resultado de ${a} + ${b} es ${a+b}`}),
 
     }
   } catch (error) {
