@@ -1,3 +1,13 @@
+const suma = (a,b) => {
+  return a +b
+}
+function validarNumero(numero){
+  if(typeof(numero) !== "number" || numero === NaN){
+    return false
+  }
+  return true
+}
+
 
 const handler = async (event) => {
   const a = event.queryStringParameters.num1
@@ -5,7 +15,7 @@ const handler = async (event) => {
 
   let numero1 = parseInt(a)
   let numero2 = parseInt(b)
-
+  if(!validarNumero(a))
   try {
 
     return {
