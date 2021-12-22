@@ -10,7 +10,7 @@ const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `El resultado de ${a} + ${b} es ${a + b}` }),
+      body: JSON.stringify({ message: `El resultado de ${a} + ${b} es ${numero1 + numero2}` }),
 
     }
   } catch (error) {
